@@ -57,3 +57,8 @@ def delete_cupcake(id):
     db.session.delete(cupcake)
     db.session.commit()
     return jsonify({"message": "Deleted"})
+
+@app.route("/")
+def home():
+    """show static page to perform requests via AJAX (Axios)"""
+    return render_template("home.html")
